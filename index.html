@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+      }
+      .btn-add-new-task {
+        padding: 2em 3em;
+        background-color: rgb(84, 34, 61);
+        color: white;
+        font-weight: bold;
+        border-radius: 25px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header {
+        width: 100%;
+        align-items: center;
+        height: 80px;
+        padding-left: 25em;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2em;
+      }
+      nav {
+        width: 20%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: rgb(21, 17, 25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4em 0;
+        align-items: center;
+      }
+      .boards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      .boards button {
+        padding: 0.8em 3em;
+        background-color: rgb(84, 34, 61);
+        font-weight: bold;
+        border: 0;
+        border-radius: 2em;
+        margin-top: 2em;
+      }
+      #hide-side-bar {
+        background: none;
+        outline: none;
+        padding: 0.3em 2em;
+      }
+
+      .modal-btn {
+        padding: 0.5em 1.5em;
+        border: 0;
+        border: 25px;
+      }
+      .btn-group {
+        display: flex;
+        gap: 0.6em;
+        bottom: 2em;
+        position: absolute;
+      }
+      .btn-group button {
+        padding: 0.8em 2em;
+        border-radius: 25px;
+      }
+      .over-lay {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.45);
+      }
+
+      .modal {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        height: 500px;
+        padding: 0.4em 1em;
+        width: 400px;
+        border-radius: 0.5em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+        background-color: rgb(29, 42, 48);
+        position: relative;
+      }
+      #btn-save {
+        background-color: rgb(11, 143, 86);
+      }
+      #btn-cancel {
+        background-color: rgb(190, 226, 31);
+      }
+      #btn-delete {
+        background-color: rgb(182, 25, 25);
+      }
+      #desc-input {
+        background-color: transparent;
+        color: white;
+      }
+      #title-input {
+        background-color: transparent;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(22, 20, 24)">
+    <nav>
+      <div class="boards">
+        <button id="btn-career">Career-Goals</button>
+        <button id="btn-work-soace">Career-Goals</button>
+      </div>
+      <div class="side-bar-hi">
+        <button>🚿Show-side-bar</button>
+        <button id="hide-side-bar">hide-side-bar🪖</button>
+      </div>
+    </nav>
+
+    <header>
+      <h1 class="header-name">Career Goals</h1>
+      <button class="btn-add-new-task">Add a new Task</button>
+    </header>
+
+    <div class="over-lay">
+      <form class="modal" action="">
+        <input type="text" placeholder="Title🧚🏿‍♀️" id="title-input" />
+        <textarea
+          placeholder="Description..."
+          name=""
+          id="desc-input"
+          cols="30"
+          rows="10"
+        >
+        </textarea>
+        <div class="btn-group">
+          <button class="modal-btn" id="btn-save">Save Changes</button>
+          <button class="modal-btn" id="btn-cancel">Cancel</button>
+          <button class="modal-btn" id="btn-delete">Delete</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
