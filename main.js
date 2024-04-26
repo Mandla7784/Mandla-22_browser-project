@@ -17,6 +17,8 @@ const [boardsButtons, headerName, addNewTaskButton] = [
 
 //save and display tasks to UI
 
+const tasks = [];
+
 const task = {
   id: "1",
   title: document.querySelector("#title-input").value,
@@ -36,7 +38,9 @@ const saveAndDisplayTasks = function () {
   cancelButton.onclick = () => {
     const modalOverlay = document.querySelector(".over-lay");
     modalOverlay.style.display = "none";
-    console.log(task);
+    tasks.push(task);
+    const uniqueTsk = [...new Set(tasks)]
+    localStorage.setItem('tasks',JSON.stringify(uniqueTsk))
   };
 };
 
