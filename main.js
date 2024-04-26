@@ -61,7 +61,7 @@ function displayTasks() {
     taskContainer.appendChild(taskElement);
   });
 }
-
+//remove duplicates from the tasks array
 function removeDuplicates(arr) {
   const uniqueArray = [];
   const map = new Map();
