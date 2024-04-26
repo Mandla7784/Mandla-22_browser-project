@@ -18,11 +18,14 @@ const [boardsButtons, headerName, addNewTaskButton] = [
 //save and display tasks to UI
 
 const tasks = [];
+ const description = document.querySelector("#desc-input").value;
+ const tittle = document.querySelector("#title-input").value;
 
+ 
 const task = {
   id: "1",
-  title: document.querySelector("#title-input").value,
-  description: document.querySelector("#desc-input").value,
+  title: tittle,
+  description:description
 };
 
 const saveAndDisplayTasks = function () {
